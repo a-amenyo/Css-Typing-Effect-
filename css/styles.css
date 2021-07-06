@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    /* visual */
+    font-size: 3.375rem;
+    color: #fc6d6d;
+
+    /* box-model */
+    position: absolute;
+    top: 40%;
+}
+h1:after {
+    /* display */
+    content : ""; 
+
+    /* box-model */
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    /* visual */
+    background: #fef9e7;
+    border-left: 3px solid #fc6d6d;
+
+    /* animation */
+    animation: typing 7s steps(42) 1, blink 1s, linear 7s infinite;
+    animation-fill-mode: forwards;
+
+}
+@keyframes typing {
+    100% {
+        left: 56ch;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-left: none;
+    }
+    100%{
+        border-left: 3px solid #fc6d6d;
+    }
+}
